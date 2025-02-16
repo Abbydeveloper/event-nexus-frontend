@@ -26,7 +26,7 @@ function Events() {
         const token = JSON.parse(sessionStorage.getItem('token'));
         
         const response = await axios.get(
-          "http://localhost:3000/api/v1/events",
+          "https://event-nexus-backend.vercel.app/api/v1/events",
           {
             headers: {
                 'Authorization': `Bearer ${token}`

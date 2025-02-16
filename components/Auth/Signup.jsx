@@ -37,7 +37,7 @@ const SignupForm = () => {
 
     try {
       // const apiUrl = ${process.env.BACKEND_URL}
-      await axios.post(`http://localhost:3000/api/v1/auth/signup`,
+      await axios.post(`https://event-nexus-backend.vercel.app/api/v1/auth/signup`,
         { 
           firstName,
           lastName,

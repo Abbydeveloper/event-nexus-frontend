@@ -16,7 +16,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const user = await axios.post('http://localhost:3000/api/v1/auth/login', { email, password });
+      const user = await axios.post('https://event-nexus-backend.vercel.app/api/v1/auth/login', { email, password });
       const token = user.data.token
         
       console.log(token)

@@ -79,11 +79,11 @@ function User() {
                         <div className='flex items-center'>
                           <div className='flex-shrink-0 h-10 w-10'>
                             <div className='h-10 w-10 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center text-white font-semibold'>
-                              {user.name.charAt(0)}
+                              {user?.firstName.charAt(0)}
                             </div>
                           </div>
                           <div className='ml-4'>
-                            <div className='text-sm font-medium text-gray-500'>{user.name}</div>
+                            <div className='text-sm font-medium text-gray-500'>{user.firstName} {user.lastName}</div>
                           </div>
                         </div>
                       </td>
@@ -105,7 +105,7 @@ function User() {
                               : "bg-red-800 text-red-100"
                           }`}
                         >
-                          {user.status}
+                          {user?.status}
                         </span>
                       </td>
 

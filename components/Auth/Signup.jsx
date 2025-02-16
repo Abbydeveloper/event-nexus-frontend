@@ -59,7 +59,7 @@ const SignupForm = () => {
     <main className="bg-gray-50 dark:bg-gray-900 py-30">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
           <a href="#" className="flex items-center mb-1 text-2xl font-semibold text-gray-900 dark:text-white">
-            <img className="w-20 h-20 mr-2" src="../../../src/assets/logo.webp" alt="logo" size={10} />  
+            <img className="w-20 h-20 mr-2" src="/assets/logo.webp" alt="logo" size={10} />  
             <span className="text-gray-300 mr-2 font-bold">Event </span> <span className="text-gray-800 font-bold">Nexus</span>  
           </a>
           {

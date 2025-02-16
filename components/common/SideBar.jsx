@@ -26,7 +26,7 @@ function SideBar() {
       <div className="h-full bg-white bg-opacity-50 p-4 flex flex-col rounded-lg border-gray-7001">
         <div className="cursor-pointer" onClick={() => setSideBarIsOpen(!sideBarIsOpen)}>
           <div className={style.logo}>
-            <img src='../../src/assets/logo.png' alt='Event Nexus logo' />
+            <img src='/assets/logo.png' alt='Event Nexus logo' />
             {sideBarIsOpen && <h2><span>Event </span><span>Nexus</span></h2>}
           </div>
         </div>

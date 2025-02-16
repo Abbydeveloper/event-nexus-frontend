@@ -24,7 +24,7 @@ export default function LandingPage() {
     <>
       <header>
         <div className={styles.container}>
-            <img src="./src/assets/logo.png" alt="Event Nexus logo" className={styles.logo} />
+            <img src="/assets/logo.png" alt="Event Nexus logo" className={styles.logo} />
             <nav className={styles.buttons}>
                 <button className=" text-white bg-purple-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-small font-thin rounded-lg text-sm px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={goToLogin}>Login</button>
                 <button className="text-white bg-purple-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-small font-thin rounded-lg text-sm px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={goToSignup}>Sign up</button>
@@ -47,7 +47,7 @@ export default function LandingPage() {
                         <p>Track RSVPs, check-in attendees, and manage your guest list with ease</p>
                     </div>
                     <div>
-                        <img src="./src/assets/panel.svg" alt="" />
+                        <img src="/assets/panel.svg" alt="" />
                     </div>
                 </div>
                 <div className={ styles["inner-section"]}>
@@ -56,7 +56,7 @@ export default function LandingPage() {
                         <p>Offer a seamless and secure ticketing experience for your attendees</p>
                     </div>
                     <div>
-                        <img src="./src/assets/tickets.svg" alt="" />
+                        <img src="/assets/tickets.svg" alt="" />
                     </div>
                 </div>
                 <div className={styles["inner-section"]}>
@@ -65,7 +65,7 @@ export default function LandingPage() {
                         <p>Promote your event with built-in marketing tools and social media integration</p>
                     </div>
                     <div>
-                        <img src="./src/assets/report.svg" alt="" />
+                        <img src="/assets/report.svg" alt="" />
                     </div>
                 </div>
                 <div className={styles["inner-section"]}>
@@ -74,7 +74,7 @@ export default function LandingPage() {
                         <p>Receive payments directly into your account and access real-time sales data</p>
                     </div>
                     <div>
-                        <img src="./src/assets/payment.svg" alt="" />
+                        <img src="/assets/payment.svg" alt="" />
                     </div>
                 </div>
                 <div className={styles["inner-section"]}>
@@ -83,7 +83,7 @@ export default function LandingPage() {
                         <p>Showcase your event in the best possible light with customizable layouts and high-quality images</p>
                     </div>
                     <div>
-                        <img src="./src/assets/program.svg" alt="" />
+                        <img src="/assets/program.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@ export default function LandingPage() {
     </main>
     <footer>
         <div className={ styles["footer-logo"]}>
-            <img src="./src/assets/event.png" alt="Event Nexus logo" />
+            <img src="/assets/event.png" alt="Event Nexus logo" />
         </div>
         <p>Copyright 2025 | Event Nexus</p>
         <div></div>

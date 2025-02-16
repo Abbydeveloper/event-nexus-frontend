@@ -6,7 +6,7 @@ function User() {
 
   const [users, setUsers] = useState([])
   const [searchFilter, setSearchFilter] = useState("");
-  const [filteredUsers, setFilteredUsers] = useState(USER_DATA);
+  const [filteredUsers, setFilteredUsers] = useState(users);
   
     const handleSearch = (e) => {
       const term = e.target.value;

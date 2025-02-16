@@ -16,7 +16,7 @@ function Events() {
     const term = e.target.value;
     setSearchFilter(term);
 
-    const filtered = events.filter(product => product?.name.includes(term) || product?.category.includes(term) )
+    const filtered = events.filter(event => event?.name.includes(term) || event?.category.includes(term) )
     setFilteredEvents(filtered);
   }
 

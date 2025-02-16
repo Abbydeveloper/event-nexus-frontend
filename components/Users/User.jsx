@@ -1,17 +1,10 @@
 // import React from 'react'
 import { useState } from "react";
 
-const USER_DATA = [
-  { id: 1, name: "John Doe", email: "john@example.com", role: "Customer", status: "Active" },
-	{ id: 2, name: "Jane Smith", email: "jane@example.com", role: "Admin", status: "Active" },
-	{ id: 3, name: "Bob Johnson", email: "bob@example.com", role: "Customer", status: "Inactive" },
-	{ id: 4, name: "Alice Brown", email: "alice@example.com", role: "Customer", status: "Active" },
-	{ id: 5, name: "Charlie Wilson", email: "charlie@example.com", role: "Moderator", status: "Active" },
-]
-
 
 function User() {
 
+  const [users, setUsers] = useState([])
   const [searchFilter, setSearchFilter] = useState("");
   const [filteredUsers, setFilteredUsers] = useState(USER_DATA);
   
@@ -19,13 +12,38 @@ function User() {
       const term = e.target.value;
       setSearchFilter(term);
   
-      const filtered = USER_DATA.filter(user => {
+      const filtered = users.filter(user => {
         if (user && user.name)
           return user.name.toLowerCase().includes(term.toLowerCase()) || user.category.toLowerCase().includes(term.toLowerCase()) 
         return ""  
       })
       setFilteredUsers(filtered);
     }
+
+    useEffect(() => {
+    
+        const fetchData = async () => {
+            const token = JSON.parse(sessionStorage.getItem('token'));
+            
+            const response = await axios.get(
+              "https://event-nexus-backend.vercel.app/api/v1/users",
+              {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }}
+            );
+            const allUsers = response.data.data
+            setUsers(allUsers)
+            
+            setFilteredUsers(allUsers)
+            // return response.data.data
+          }
+    
+        fetchData()
+          .catch(console.error);
+      }, []);
+
+
   return (
     <>
       <main className="max-w-7xl mx-auto py-6 px-4 lg:px-8">
